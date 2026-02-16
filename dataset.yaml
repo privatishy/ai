@@ -1,0 +1,27 @@
+# Конфигурация датасета для YOLOv8
+
+# Путь к датасету
+path: dataset/
+
+# Разделение данных
+train: images/train
+val: images/val
+test: images/test
+
+# Количество классов (из config.yaml)
+nc: 12
+
+# Имена классов (должны совпадать с config.yaml)
+names:
+  0: tray
+  1: borsch
+  2: pasta
+  3: cutlet
+  4: salad
+  5: tea
+  6: compote
+  7: bread
+  8: soup
+  9: garnish
+  10: dessert
+  11: drink

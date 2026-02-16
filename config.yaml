@@ -1,0 +1,141 @@
+# ============================================
+# config.yaml - Конфигурация проекта
+# Школьное меню "Газпром школа Санкт-Петербург"
+# ============================================
+
+# --- Проект ---
+project:
+  name: "Автоматизация процесса оплаты питания"
+  version: "1.0.0"
+  author: "Кулик Арсений Олегович"
+  school: "Газпром школа Санкт-Петербург"
+  year: "2025-2026"
+
+# --- Классы для распознавания (школьное меню) ---
+classes:
+  - name: tray
+    id: 0
+    description: "Поднос"
+
+  - name: borsch
+    id: 1
+    description: "Борщ"
+    price: 85
+
+  - name: pasta
+    id: 2
+    description: "Макароны"
+    price: 65
+
+  - name: cutlet
+    id: 3
+    description: "Котлета"
+    price: 75
+
+  - name: salad
+    id: 4
+    description: "Салат"
+    price: 45
+
+  - name: tea
+    id: 5
+    description: "Чай"
+    price: 25
+
+  - name: compote
+    id: 6
+    description: "Компот"
+    price: 30
+
+  - name: bread
+    id: 7
+    description: "Хлеб"
+    price: 15
+
+  - name: soup
+    id: 8
+    description: "Суп"
+    price: 80
+
+  - name: garnish
+    id: 9
+    description: "Гарнир"
+    price: 50
+
+  - name: dessert
+    id: 10
+    description: "Десерт"
+    price: 60
+
+  - name: drink
+    id: 11
+    description: "Напиток"
+    price: 35
+
+# --- Настройки модели YOLOv8m ---
+model:
+  name: "yolov8m"
+  confidence: 0.5
+  iou_threshold: 0.45
+  image_size: 640
+  max_det: 100
+  batches: 16
+  epochs: 100
+  patience: 50
+  pretrained: true
+
+# --- Настройки камеры ---
+camera:
+  id: 0
+  width: 1920
+  height: 1080
+  fps: 30
+  backend: "cv2.CAP_DSHOW"
+
+# --- Настройки обработки ---
+processing:
+  target_fps: 30
+  max_latency_ms: 1500
+  gpu_acceleration: false
+  tensorrt_optimized: false
+
+# --- База данных ---
+database:
+  type: "postgresql"
+  host: "localhost"
+  port: 5432
+  name: "school_canteen"
+  pool_size: 5
+
+# --- Веб-интерфейс ---
+web:
+  host: "0.0.0.0"
+  port: 5000
+  debug: false
+  secret_key: "change_in_production"
+  session_timeout: 3600
+
+# --- Логирование ---
+logging:
+  level: "INFO"
+  file: "logs/app.log"
+  max_size_mb: 10
+  backup_count: 5
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+
+# --- Датасет ---
+dataset:
+  path: "dataset/"
+  train_split: 0.8
+  val_split: 0.1
+  test_split: 0.1
+  min_images: 3000
+  augmentation: true
+
+# --- Требования ---
+requirements:
+  accuracy_target: 0.92
+  latency_target_ms: 1500
+  fps_target: 30
+  gpu_target: "NVIDIA RTX 3050"
+  format_target: "TensorRT"

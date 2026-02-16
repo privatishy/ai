@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Школьная Столовая AI - Газпром Школа</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>🍽️ Школьная Столовая AI</h1>
+            <p class="subtitle">Система автоматического распознавания блюд<br>Газпром Школа Санкт-Петербург | 2025-2026
+            </p>
+        </header>
+
+        <main>
+            <div class="video-section">
+                <h2>📹 Распознавание блюд в реальном времени</h2>
+                <div class="video-container">
+                    <img id="video-feed" src="{{ url_for('video_feed') }}" alt="Видео с камеры">
+                </div>
+            </div>
+
+            <div class="info-section">
+                <div class="card">
+                    <h2>📊 Распознанные блюда</h2>
+                    <div id="dishes-list" class="dishes-list">
+                        <p class="loading">⏳ Ожидание данных...</p>
+                    </div>
+                </div>
+
+                <div class="card total-card">
+                    <h2>💰 Общая стоимость</h2>
+                    <div class="total-price" id="total-price">0 ₽</div>
+                </div>
+
+                <div class="card">
+                    <h2>📈 Статистика системы</h2>
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <span class="stat-label">FPS</span>
+                            <span class="stat-value" id="fps">0</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">Объектов</span>
+                            <span class="stat-value" id="objects">0</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h2>🔗 Навигация</h2>
+                    <a href="/admin" class="nav-button">⚙️ Админ-панель</a>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p><strong>Выполнил:</strong> Кулик Арсений Олегович, 10 класс «Е»</p>
+            <p><strong>Научный руководитель:</strong> Деев Андрей Павлович</p>
+            <p style="margin-top: 15px; opacity: 0.9;">Частное общеобразовательное учреждение «Газпром школа
+                Санкт-Петербург» | 2025-2026</p>
+        </footer>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+
+</html>

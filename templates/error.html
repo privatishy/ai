@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ошибка - Школьная Столовая AI</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <style>
+        .error-container {
+            text-align: center;
+            padding: 100px 20px;
+            color: white;
+        }
+
+        .error-code {
+            font-size: 8em;
+            font-weight: bold;
+            color: #ff6b6b;
+            margin: 0;
+        }
+
+        .error-message {
+            font-size: 1.5em;
+            margin: 20px 0;
+        }
+
+        .error-btn {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 15px 30px;
+            background: white;
+            color: #667eea;
+            text-decoration: none;
+            border-radius: 10px;
+            font-weight: bold;
+            transition: transform 0.2s;
+        }
+
+        .error-btn:hover {
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="error-container">
+            <h1 class="error-code">{{ error_code or 404 }}</h1>
+            <p class="error-message">{{ error_message or 'Страница не найдена' }}</p>
+            <a href="{{ url_for('index') }}" class="error-btn">Вернуться на главную</a>
+        </div>
+    </div>
+</body>
+
+</html>
