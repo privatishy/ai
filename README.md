@@ -97,9 +97,13 @@ README.md # Документация
 ### Переменные окружения (.env)
 
 MODEL_PATH - Путь к модели (weights/yolov8m.pt)
+
 MODEL_CONFIDENCE - Порог уверенности (0.5)
+
 CAMERA_ID - ID камеры (0)
+
 FLASK_PORT - Порт сервера (5000)
+
 USE_CUDA - Использовать GPU (False)
 
 ### Классы для распознавания
@@ -187,6 +191,7 @@ Model not loading - Проверьте путь в MODEL_PATH
 ---
 
 Газпром школа Санкт-Петербург | 2025-2026
+
 
 
 
