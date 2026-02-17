@@ -13,5 +13,4 @@
 [![PyTorch](https://img.shields.io/badge/PyTorch-2.0-EE4C2C?style=for-the-badge&logo=pytorch)](https://github.com/privatishy/ai)
 [![OpenCV](https://img.shields.io/badge/OpenCV-4.8-5C3EE8?style=for-the-badge&logo=opencv)](https://github.com/privatishy/ai)
 [![Flask](https://img.shields.io/badge/Flask-3.0-000000?style=for-the-badge&logo=flask)](https://github.com/privatishy/ai)
-[![Last Commit](https://img.shields.io/github/last-commit/privatishy/ai?style=flat-square)](https://github.com/privatishy/ai)
-[![License](https://img.shields.io/github/license/privatishy/ai?style=flat-square)](https://github.com/privatishy/ai)
+vatishy/ai)
