@@ -181,3 +181,4 @@ USE_CUDA=False
 6. `compote` (компот) — 30 руб.
 
 
+
