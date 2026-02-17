@@ -127,3 +127,44 @@ python main.py
 ---
 
 ## API Endpoints
+- `GET /` - Главная страница
+- `GET /admin` - Админ-панель
+- `GET /video_feed` - MJPEG поток видео
+- `GET /api/detect` -  JSON с данными распознавания
+- `GET /api/export-logs` - Экспорт логов (ZIP) 
+- `POST /api/retrain` - Запуск дообучения
+- `POST /clear-cache` - Очистка кэша
+
+**Привер ответа API (/api/detect):**
+```bash
+{
+   "dishes": [
+      {"name": "borsch". "count": 1, "price": 85},
+      {"name": "pasta", "count": 1, "price": 65}
+   ],
+   "total": 150,
+   "fps": 4.2,
+   "objects": 2
+}
+```
+
+---
+
+## Конфигурация
+**Переменные окружения (.env):**
+```bash
+MODEL_PATH=weights/yolov8m.pt
+MODEL_CONFIDENCE=0.5
+CAMERA_ID=0
+FLASK_PORT=5000
+USE_CUDA=False
+```
+
+**Классы распознавания (config.yaml):**
+Система поддерживает гибкую настройку классов и цен без изменения кода.
+1. `borsch` (борщ) — 85 руб.
+2. `pasta` (макароны) — 65 руб.
+3. `cutlet` (котлета) — 75 руб.
+4. `salad` (салат) — 45 руб.
+5. `tea` (чай) — 25 руб.
+6. `compote` (компот) — 30 руб.
