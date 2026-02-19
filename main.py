@@ -17,7 +17,7 @@ from datetime import datetime
 # НАСТРОЙКА ЛОГИРОВАНИЯ
 # ============================================
 
-# Создаём директорию для логов
+# Создание директории для логов
 os.makedirs('logs', exist_ok=True)
 
 # Основной логгер
@@ -248,7 +248,7 @@ def detect():
 @app.route('/admin')
 def admin():
     """Админ-панель"""
-    access_logger.info(f"Админ-панель accessed from {request.remote_addr}")
+    access_logger.info(f"Админ-панель запрошена от {request.remote_addr}")
     return render_template('admin.html')
 
 @app.route('/error')
@@ -310,7 +310,7 @@ def clear_cache():
 
 if __name__ == '__main__':
     logger.info("=" * 50)
-    logger.info("🚀 Запуск системы автоматизации столовой")
+    logger.info("🚀 Запуск PKAI")
     logger.info("=" * 50)
     
     # Запуск потока камеры
